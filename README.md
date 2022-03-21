@@ -10,9 +10,9 @@ python3 data/download_dataset.py --dataset-name coco2017 --save-dir data/coco --
 ## Train
 ### Double Head
 python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r50_fpn_1x_coco.py \
-                      --work-dir train/double_head_train
+&emsp;&emsp;&emsp;&emsp;--work-dir train/double_head_train
 ### Mask RCNN
 python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r50_fpn_1x_coco.py \
-                      --work-dir train/mask_rcnn_train
+&emsp;&emsp;&emsp;&emsp;--work-dir train/mask_rcnn_train
                       
 ## Evaluation
