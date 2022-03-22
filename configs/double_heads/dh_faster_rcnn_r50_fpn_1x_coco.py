@@ -22,8 +22,10 @@ model = dict(
                 type='CrossEntropyLoss', use_sigmoid=False, loss_weight=2.0),
             loss_bbox=dict(type='SmoothL1Loss', beta=1.0, loss_weight=2.0))))
 
-runner = dict(
-    max_epochs=1)
+runner = dict(_delete_=True, type='IterBasedRunner', max_iters=900)
+
+checkpoint_config = dict(interval=1)
+
 data = dict(
     samples_per_gpu=3)
 
