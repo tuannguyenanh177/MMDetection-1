@@ -25,5 +25,5 @@ python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r
 !python test/evaluation.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r50_fpn_1x_coco.py \
                           train/work_dirs/latest.pth \
                           --work-dir test/work_dirs \
-                          --eval mAP+bbox
+                          --eval mAP bbox
 ```
