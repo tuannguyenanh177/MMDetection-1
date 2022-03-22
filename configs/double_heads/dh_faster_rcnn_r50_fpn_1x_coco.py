@@ -21,3 +21,11 @@ model = dict(
             loss_cls=dict(
                 type='CrossEntropyLoss', use_sigmoid=False, loss_weight=2.0),
             loss_bbox=dict(type='SmoothL1Loss', beta=1.0, loss_weight=2.0))))
+
+runner = dict(
+    max_epochs=1)
+data = dict(
+    samples_per_gpu=3)
+
+optimizer_config = dict(
+ _delete_=True, grad_clip=dict(max_norm=35, norm_type=2))
