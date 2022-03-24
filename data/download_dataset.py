@@ -70,9 +70,9 @@ def main():
     data2url = dict(
         # TODO: Support for downloading Panoptic Segmentation of COCO
         coco2017=[
-            # 'http://images.cocodataset.org/zips/train2017.zip',
+            'http://images.cocodataset.org/zips/train2017.zip',
             'http://images.cocodataset.org/zips/val2017.zip',
-            # 'http://images.cocodataset.org/zips/test2017.zip',
+            'http://images.cocodataset.org/zips/test2017.zip',
             'http://images.cocodataset.org/annotations/' +
             'annotations_trainval2017.zip'
         ],
