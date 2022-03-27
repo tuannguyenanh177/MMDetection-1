@@ -16,7 +16,7 @@ python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r
 ```
 ### Mask RCNN
 ```
-python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r50_fpn_1x_coco.py \
+python train/train.py /content/MMDetection/configs/mask_rcnn/mask_rcnn_r50_fpn_2x_coco.py \
                       --work-dir train/mask_rcnn_train
 ```
 
