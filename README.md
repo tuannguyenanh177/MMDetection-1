@@ -14,18 +14,15 @@ python3 data/download_dataset.py --dataset-name coco2017 --save-dir data/coco --
 python train/train.py /content/MMDetection/configs/double_heads/dh_faster_rcnn_r50_fpn_1x_coco.py \
                       --work-dir train/double_head_train
 ```
+### Double Head Extension
+```
+python train/train.py ./configs/double_heads/dh_ext_faster_rcnn_r50_fpn_1x_coco.py \
+                      --work-dir train/double_head_train
+```
 ### Mask RCNN
 ```
 python train/train.py /content/MMDetection/configs/mask_rcnn/mask_rcnn_r50_fpn_2x_coco.py \
                       --work-dir train/mask_rcnn_train
-```
-
-### Double Head Extension
-```
-pip uninstall mmdet
-pip install git+https://github.com/tuannguyenanh177/mmdetection.git@double_head_ext
-python train/train.py /content/MMDetection/configs/double_heads/dh_ext_faster_rcnn_r50_fpn_1x_coco.py \
-                      --work-dir train/double_head_train
 ```
 
 ## Evaluation
