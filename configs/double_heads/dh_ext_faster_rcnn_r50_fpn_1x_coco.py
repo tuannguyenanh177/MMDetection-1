@@ -1,3 +1,10 @@
+custom_imports = dict(
+    imports=[
+        'models.double_head_ext.double_roi_head_ext',
+        'models.double_head_ext.double_bbox_head_ext',
+    ],
+    allow_failed_imports=False)
+
 _base_ = '../faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py'
 model = dict(
     roi_head=dict(
