@@ -28,7 +28,7 @@ test_pipeline = [
             dict(type='Collect', keys=['img']),
         ])
 ]
-classes=('person', 'bicycle', 'car', 'motorcycle')
+classes=('car', 'cat', 'bottle', 'chair')
 data = dict(
     samples_per_gpu=2,
     workers_per_gpu=2,
