@@ -2,7 +2,7 @@
 
 ## Install
 ```pip install -r requirements.txt -f https://download.openmmlab.com/mmcv/dist/{cuda_version}/{torch_version}/index.html``` \
-example: ```pip install -r requirements.txt -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.10.0/index.html```
+Example: ```pip install -r requirements.txt -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.10.0/index.html```
 
 ## Dataset
 ```
