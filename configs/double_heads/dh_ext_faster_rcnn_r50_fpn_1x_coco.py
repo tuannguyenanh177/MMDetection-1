@@ -38,3 +38,5 @@ data = dict(
 
 optimizer_config = dict(
  _delete_=True, grad_clip=dict(max_norm=35, norm_type=2))
+
+log_config = dict(interval=1) # print log every inter (included loss value)
