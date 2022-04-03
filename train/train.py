@@ -18,6 +18,10 @@ from mmdet.datasets import build_dataset
 from mmdet.models import build_detector
 from mmdet.utils import collect_env, get_root_logger, setup_multi_processes
 
+import sys
+from os.path import dirname, join, abspath
+sys.path.insert(0, abspath(join(dirname(__file__), '..')))
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')

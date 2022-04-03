@@ -1,11 +1,18 @@
+custom_imports = dict(
+    imports=[
+        'models.double_head_ext.double_roi_head_ext',
+        'models.double_head_ext.double_bbox_head_ext',
+    ],
+    allow_failed_imports=False)
+
 _base_ = '../faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py'
 model = dict(
     roi_head=dict(
-        type='DoubleHeadRoIHead',
+        type='DoubleHeadRoIHeadExt',
         reg_roi_scale_factor=1.3,
         bbox_head=dict(
             _delete_=True,
-            type='DoubleConvFCBBoxHead',
+            type='DoubleConvFCBBoxHeadExt',
             num_convs=4,
             num_fcs=2,
             in_channels=256,
@@ -20,7 +27,7 @@ model = dict(
             reg_class_agnostic=False,
             loss_cls=dict(
                 type='CrossEntropyLoss', use_sigmoid=False, loss_weight=2.0),
-            loss_bbox=dict(type='SmoothL1Loss', beta=1.0, loss_weight=2.0))))
+            loss_bbox=dict(type='SmoothL1Loss', beta=1.0, loss_weight=2.5))))
 
 runner = dict(_delete_=True, type='IterBasedRunner', max_iters=1000)
 
