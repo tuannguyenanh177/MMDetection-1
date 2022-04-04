@@ -6,6 +6,7 @@ custom_imports = dict(
     allow_failed_imports=False)
 
 _base_ = '../faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py'
+
 model = dict(
     roi_head=dict(
         type='DoubleHeadRoIHeadExt',
@@ -40,3 +41,5 @@ optimizer_config = dict(
  _delete_=True, grad_clip=dict(max_norm=35, norm_type=2))
 
 log_config = dict(interval=1) # print log every inter (included loss value)
+
+evaluation = dict(interval=100, metric='bbox') # evaluate every 100 iters
