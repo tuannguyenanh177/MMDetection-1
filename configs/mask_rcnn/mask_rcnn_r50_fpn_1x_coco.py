@@ -4,7 +4,7 @@ _base_ = [
     '../_base_/schedules/schedule_1x.py', '../_base_/default_runtime.py'
 ]
 
-runner = dict(_delete_=True, type='IterBasedRunner', max_iters=1000)
+runner = dict(_delete_=True, type='IterBasedRunner', max_iters=10000)
 
 checkpoint_config = dict(interval=100)
 
