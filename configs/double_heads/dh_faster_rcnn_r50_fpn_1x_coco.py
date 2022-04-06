@@ -22,7 +22,7 @@ model = dict(
                 type='CrossEntropyLoss', use_sigmoid=False, loss_weight=2.0),
             loss_bbox=dict(type='SmoothL1Loss', beta=1.0, loss_weight=2.0))))
 
-runner = dict(_delete_=True, type='IterBasedRunner', max_iters=1000)
+runner = dict(_delete_=True, type='IterBasedRunner', max_iters=10000)
 
 checkpoint_config = dict(interval=100)
 
