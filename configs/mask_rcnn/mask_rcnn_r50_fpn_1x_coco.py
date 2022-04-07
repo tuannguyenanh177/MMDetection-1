@@ -6,7 +6,7 @@ _base_ = [
 
 runner = dict(_delete_=True, type='IterBasedRunner', max_iters=1000)
 
-checkpoint_config = dict(interval=100)
+checkpoint_config = dict(interval=1000)
 
 data = dict(
     samples_per_gpu=3)
