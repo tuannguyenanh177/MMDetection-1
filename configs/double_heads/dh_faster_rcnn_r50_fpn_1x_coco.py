@@ -34,4 +34,4 @@ optimizer_config = dict(
 
 log_config = dict(interval=1) # print log every inter (included loss value)
 
-evaluation = dict(interval=1000, metric='bbox') # evaluate every 100 iters
+evaluation = dict(interval=1000, metric='bbox', save_best='bbox_mAP') # evaluate every 100 iters
