@@ -46,7 +46,7 @@ class DoubleHeadRoIHeadExt(DoubleHeadRoIHead):
             # Complementary Fusion of Classifiers
             cls_score = fc_cls_score + conv_cls_score * (1 - fc_cls_score)
             bbox_results = dict(
-                cls_score=cls_score,
+                cls_score=fc_cls_score,
                 bbox_pred=conv_bbox_pred,
                 bbox_feats=bbox_cls_feats)
             return bbox_results
