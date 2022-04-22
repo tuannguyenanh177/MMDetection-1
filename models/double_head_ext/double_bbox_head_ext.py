@@ -179,8 +179,11 @@ class DoubleConvFCBBoxHeadExt(DoubleConvFCBBoxHead):
             conv_scores = F.softmax(
                 conv_cls_score, dim=-1) if conv_cls_score is not None else None
 
-        # Complementary Fusion of Classifiers
-        scores = fc_scores + conv_scores * (1 - fc_scores)
+        if self.training:
+            scores = fc_scores
+        else:
+            # Complementary Fusion of Classifiers
+            scores = fc_scores + conv_scores * (1 - fc_scores)
 
         # bbox_pred would be None in some detector when with_reg is False,
         # e.g. Grid R-CNN.
